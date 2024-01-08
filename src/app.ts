@@ -8,7 +8,7 @@ AppDataSource.initialize()
     .then(() => {
         runnerApp();
     })
-    .catch((error) => console.log(error))
+    .catch((error: any) => console.log(error))
 
 app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);
