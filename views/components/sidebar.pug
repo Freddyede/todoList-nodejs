@@ -1,0 +1,57 @@
+nav(class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion")
+    div(class="sb-sidenav-menu")
+        div(class="nav")
+            div(class="sb-sidenav-menu-heading") Core
+            a(class="nav-link" href="#")
+                div(class="sb-nav-link-icon")
+                    i(class="fas fa-tachometer-alt")
+                span Dashboard
+            div(class="sb-sidenav-menu-heading") Interface
+            a(class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts")
+                div(class="sb-nav-link-icon")
+                    i(class="fas fa-columns")
+                span Layouts
+                div(class="sb-sidenav-collapse-arrow")
+                    i(class="fas fa-angle-down")
+            div(class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion" style="")
+                nav(class="sb-sidenav-menu-nested nav")
+                    a(class="nav-link" href="#") Static Navigation
+                    a(class="nav-link" href="#") Light Sidenav
+            a(class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages")
+                div(class="sb-nav-link-icon")
+                    i(class="fas fa-book-open")
+                span Pages
+                div(class="sb-sidenav-collapse-arrow")
+                    i(class="fas fa-angle-down")
+            div(class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion")
+                nav(class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages")
+                    a(class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth")
+                        span Authentication
+                        div(class="sb-sidenav-collapse-arrow")
+                            i(class="fas fa-angle-down")
+                    div(class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages")
+                        nav(class="sb-sidenav-menu-nested nav")
+                            a(class="nav-link" href="login.html") Login
+                            a(class="nav-link" href="login.html") Register
+                                a(class="nav-link" href="login.html") Forgot Password
+                    a(class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError")
+                        span Error
+                        div(class="sb-sidenav-collapse-arrow")
+                            i(class="fas fa-angle-down")
+                    div(class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages")
+                        nav(class="sb-sidenav-menu-nested nav")
+                            a(class="nav-link" href="#") 401 Page
+                            a(class="nav-link" href="#") 404 Page
+                            a(class="nav-link" href="#") 500 Page
+            div(class="sb-sidenav-menu-heading") Addons
+            a(class="nav-link" href="#")
+                div(class="sb-nav-link-icon")
+                    i(class="fas fa-chart-area")
+                span Charts
+            a(class="nav-link" href="#")
+                div(class="sb-nav-link-icon")
+                    i(class="fas fa-table")
+                span Tables
+    div(class="sb-sidenav-footer")
+        div(class="small") Logged in as:
+        span user@gmail.com
