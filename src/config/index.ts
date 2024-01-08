@@ -1,7 +1,3 @@
-import {Migration21704711492529} from "../migrations/1704711492529-migration_2";
-import {Migration11704708487213} from "../migrations/1704708487213-migration_1";
-import {Tasks} from "../entity/Tasks";
-import {User} from "../entity/User";
 import {DataSource} from "typeorm";
 
 export const Config: any = {
@@ -24,6 +20,7 @@ export const Config: any = {
             ],
             migrations: ["{dist, src}/migration/*.{ts, js}"],
             subscribers: [],
+
         })},
     entities: {
         user: {
