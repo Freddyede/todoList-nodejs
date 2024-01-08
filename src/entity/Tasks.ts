@@ -12,7 +12,7 @@ export class Tasks {
     @Column()
     description: string
     
-    @ManyToOne(() => User, (user) => user.task)
+    @ManyToOne(() => User, (user: User) => user.tasks)
     user: User
 
 }

@@ -1,17 +1,17 @@
 import express from 'express';
 import { AppDataSource } from './data-source';
 import { User } from "./entity/User";
-import { getRepo } from "./utils";
+import { getRelationsFinder } from "./utils";
+import {Tasks} from "./entity/Tasks";
 const app = express();
 const port = 3000;
 
 AppDataSource.initialize()
     .then(() => {
-        app.get('/', async (req, res) => {
-            const userRepo = getRepo(User);
-            const users = await userRepo.find({relations : {task : true}})
+        app.get('/', async (_req, res) => {
+            const users: User[] = await getRelationsFinder(User);
             // console.log(users.task);
-            users.map(user => console.log(user.task[0].name));
+            users.map((user: User) => user.tasks.map((task: Tasks) => console.log(task)));
             res.send('Hello World!');
         });
     })
