@@ -1,8 +1,10 @@
 import express from "express";
-import {index} from "../controllers/HomeController";
+import {createViews, index, saveUser} from "../controllers/HomeController";
 
 const HomeRoads = express.Router();
 
-HomeRoads.get('/', index);
+HomeRoads.get('/', index)
+    .get('/create', createViews)
+    .post('/create', saveUser);
 
 export default HomeRoads;

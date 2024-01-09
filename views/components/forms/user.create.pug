@@ -1,0 +1,11 @@
+form(action="/create" method="POST", class="mt-5 mb-5")
+    div(class="form-group col-10 offset-1")
+        input(id="lastname" placeholder="Last name" name="lastname" class="text-center form-control" type="text")
+        input(id="firstname" placeholder="First name" name="firstname" class="mt-5 text-center form-control" type="text")
+        input(id="pwd" name="pwd" placeholder="Mot de passe" class="mt-5 text-center form-control" type="password")
+        select(class="text-center form-select form-select-sm mt-5" name="tasks")
+            option(value="") -- SELECT TASKS --
+            for task in tasks
+                option(value=task.id) #{task.name}
+    div(class="col-12 d-flex justify-content-center align-items-center mt-5")
+        button(type="submit" class="btn btn-success") Valider
