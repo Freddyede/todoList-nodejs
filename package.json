@@ -9,12 +9,12 @@
     "test": "jest",
     "typeorm": "typeorm-ts-node-commonjs",
     "typeorm::cli": "ts-node node_modules/typeorm/cli.js",
-    "migration:revert": "npm run typeorm::cli migration:revert -d src/data-source.ts",
+    "migration:revert": "ts-node node_modules/typeorm/cli.js migration:revert -d src/data-source.ts",
     "schema:sync": "npm run typeorm schema:sync -- -d src/data-source.ts",
     "migration:show": "npm run typeorm migration:show -- -d src/data-source.ts",
-    "migration:generate": "npm run typeorm::cli migration:generate -d src/data-source.ts",
-    "migration:create": "npm run typeorm::cli migration:create -d src/data-source.ts",
-    "migration:run": "npm run typeorm::cli migration:run -d src/data-source.ts"
+    "migration:generate": "ts-node node_modules/typeorm/cli.js migration:generate -d src/data-source.ts",
+    "migration:create": "ts-node node_modules/typeorm/cli.js migration:create -d src/data-source.ts",
+    "migration:run": "ts-node node_modules/typeorm/cli.js migration:run -d src/data-source.ts"
   },
   "keywords": [],
   "author": "",

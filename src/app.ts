@@ -2,7 +2,7 @@ import { AppDataSource } from './data-source';
 import { runnerApp } from "./utils";
 import { app } from "./constants";
 
-const port = 3000;
+const port: number = 3000;
 
 AppDataSource.initialize()
     .then(() => {

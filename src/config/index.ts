@@ -1,4 +1,5 @@
-import {DataSource} from "typeorm";
+import { DataSource } from "typeorm";
+import {Mig91704807514675} from "../migrations/1704807514675-mig_9";
 
 export const Config: any = {
     app: {
@@ -18,7 +19,7 @@ export const Config: any = {
             entities: [
                 "{dist, src}/entity/*.{js, ts}"
             ],
-            migrations: ["{dist, src}/migration/*.{ts, js}"],
+            migrations: [Mig91704807514675],
             subscribers: [],
 
         })},
